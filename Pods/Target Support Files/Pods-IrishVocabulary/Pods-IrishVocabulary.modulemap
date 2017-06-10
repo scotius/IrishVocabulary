@@ -1,0 +1,6 @@
+framework module Pods_IrishVocabulary {
+  umbrella header "Pods-IrishVocabulary-umbrella.h"
+
+  export *
+  module * { export * }
+}

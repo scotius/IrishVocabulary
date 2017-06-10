@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14050DE076A2A9F21C260463 /* Pods_IrishVocabulary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ECCFF5E2A1B8734E29BF888 /* Pods_IrishVocabulary.framework */; };
+		D20B6AEA1EDFD0BF00B32B76 /* Verb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20B6AE91EDFD0BF00B32B76 /* Verb.swift */; };
+		D220B41D1EC341F100667ECD /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = D220B41C1EC341F100667ECD /* default.realm */; };
+		D24D6D721EE059CA00A236B2 /* VerbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */; };
+		D24D6D741EE1A8BA00A236B2 /* PrepositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D6D731EE1A8BA00A236B2 /* PrepositionViewController.swift */; };
+		D289CCBF1EE111FF00104EF9 /* Adjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCBE1EE111FF00104EF9 /* Adjective.swift */; };
+		D289CCC11EE1129500104EF9 /* AdjectiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */; };
+		D289CCC41EE11F3600104EF9 /* CompoundPreposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC31EE11F3600104EF9 /* CompoundPreposition.swift */; };
+		D289CCC61EE11F4900104EF9 /* PrepositionalPronoun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC51EE11F4900104EF9 /* PrepositionalPronoun.swift */; };
+		D289CCC81EE11F5600104EF9 /* SimplePreposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC71EE11F5600104EF9 /* SimplePreposition.swift */; };
+		D291CEE51EDF0E59004A4FF3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291CEE41EDF0E59004A4FF3 /* Section.swift */; };
+		D2A88E621EC2009900F83386 /* Noun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88E611EC2009900F83386 /* Noun.swift */; };
+		D2A88E641EC200CC00F83386 /* NounTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88E631EC200CC00F83386 /* NounTableViewController.swift */; };
+		D2B106AA1EC01C2E006163DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B106A91EC01C2E006163DC /* AppDelegate.swift */; };
+		D2B106AC1EC01C2E006163DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B106AB1EC01C2E006163DC /* ViewController.swift */; };
+		D2B106AF1EC01C2E006163DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106AD1EC01C2E006163DC /* Main.storyboard */; };
+		D2B106B11EC01C2E006163DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B01EC01C2E006163DC /* Assets.xcassets */; };
+		D2B106B41EC01C2E006163DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B21EC01C2E006163DC /* LaunchScreen.storyboard */; };
+		D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F1B9BA1ECD544F0080CC24 /* Entry.swift */; };
+		D2F42B831EE2723E003C72B8 /* VerbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */; };
+		D2F42B851EE27570003C72B8 /* VerbTenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */; };
+		D2F42B871EE276A5003C72B8 /* VerbParts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B861EE276A5003C72B8 /* VerbParts.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		53733A7D740AB59E94052378 /* Pods-IrishVocabulary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishVocabulary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IrishVocabulary/Pods-IrishVocabulary.debug.xcconfig"; sourceTree = "<group>"; };
+		9ECCFF5E2A1B8734E29BF888 /* Pods_IrishVocabulary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IrishVocabulary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8F32C3B96D53FBF48AA16AF /* Pods-IrishVocabulary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishVocabulary.release.xcconfig"; path = "Pods/Target Support Files/Pods-IrishVocabulary/Pods-IrishVocabulary.release.xcconfig"; sourceTree = "<group>"; };
+		D20B6AE91EDFD0BF00B32B76 /* Verb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verb.swift; sourceTree = "<group>"; };
+		D220B41C1EC341F100667ECD /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
+		D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTableViewController.swift; sourceTree = "<group>"; };
+		D24D6D731EE1A8BA00A236B2 /* PrepositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepositionViewController.swift; sourceTree = "<group>"; };
+		D289CCBE1EE111FF00104EF9 /* Adjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adjective.swift; sourceTree = "<group>"; };
+		D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjectiveTableViewController.swift; sourceTree = "<group>"; };
+		D289CCC31EE11F3600104EF9 /* CompoundPreposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundPreposition.swift; sourceTree = "<group>"; };
+		D289CCC51EE11F4900104EF9 /* PrepositionalPronoun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepositionalPronoun.swift; sourceTree = "<group>"; };
+		D289CCC71EE11F5600104EF9 /* SimplePreposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePreposition.swift; sourceTree = "<group>"; };
+		D291CEE41EDF0E59004A4FF3 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		D2A88E611EC2009900F83386 /* Noun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Noun.swift; sourceTree = "<group>"; };
+		D2A88E631EC200CC00F83386 /* NounTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NounTableViewController.swift; sourceTree = "<group>"; };
+		D2B106A61EC01C2E006163DC /* IrishVocabulary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IrishVocabulary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B106A91EC01C2E006163DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2B106AB1EC01C2E006163DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D2B106AE1EC01C2E006163DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D2B106B01EC01C2E006163DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2B106B31EC01C2E006163DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D2B106B51EC01C2E006163DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2F1B9BA1ECD544F0080CC24 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbDetailViewController.swift; sourceTree = "<group>"; };
+		D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTenseTableViewController.swift; sourceTree = "<group>"; };
+		D2F42B861EE276A5003C72B8 /* VerbParts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbParts.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2B106A31EC01C2E006163DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14050DE076A2A9F21C260463 /* Pods_IrishVocabulary.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6A8ECD8BD510AD8EE5FCCD60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9ECCFF5E2A1B8734E29BF888 /* Pods_IrishVocabulary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B7FC6426B1EA3346BFAA3EB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				53733A7D740AB59E94052378 /* Pods-IrishVocabulary.debug.xcconfig */,
+				B8F32C3B96D53FBF48AA16AF /* Pods-IrishVocabulary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D20B6AE71EDFC77A00B32B76 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2F1B9BA1ECD544F0080CC24 /* Entry.swift */,
+				D291CEE41EDF0E59004A4FF3 /* Section.swift */,
+				D2B106A91EC01C2E006163DC /* AppDelegate.swift */,
+				D2B106AB1EC01C2E006163DC /* ViewController.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D20B6AE81EDFC7FD00B32B76 /* Verb Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D20B6AE91EDFD0BF00B32B76 /* Verb.swift */,
+				D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */,
+				D2F42B861EE276A5003C72B8 /* VerbParts.swift */,
+				D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */,
+				D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */,
+			);
+			name = "Verb Classes";
+			sourceTree = "<group>";
+		};
+		D289CCBD1EE111B400104EF9 /* Adjective Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D289CCBE1EE111FF00104EF9 /* Adjective.swift */,
+				D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */,
+			);
+			name = "Adjective Classes";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D289CCC21EE119B700104EF9 /* Preposition Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D289CCC31EE11F3600104EF9 /* CompoundPreposition.swift */,
+				D289CCC51EE11F4900104EF9 /* PrepositionalPronoun.swift */,
+				D289CCC71EE11F5600104EF9 /* SimplePreposition.swift */,
+				D24D6D731EE1A8BA00A236B2 /* PrepositionViewController.swift */,
+			);
+			name = "Preposition Classes";
+			sourceTree = "<group>";
+		};
+		D2A88E601EC2004700F83386 /* Noun Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D2A88E611EC2009900F83386 /* Noun.swift */,
+				D2A88E631EC200CC00F83386 /* NounTableViewController.swift */,
+			);
+			name = "Noun Classes";
+			sourceTree = "<group>";
+		};
+		D2B1069D1EC01C2E006163DC = {
+			isa = PBXGroup;
+			children = (
+				D220B41C1EC341F100667ECD /* default.realm */,
+				D2B106A81EC01C2E006163DC /* IrishVocabulary */,
+				D2B106A71EC01C2E006163DC /* Products */,
+				9B7FC6426B1EA3346BFAA3EB /* Pods */,
+				6A8ECD8BD510AD8EE5FCCD60 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D2B106A71EC01C2E006163DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2B106A61EC01C2E006163DC /* IrishVocabulary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2B106A81EC01C2E006163DC /* IrishVocabulary */ = {
+			isa = PBXGroup;
+			children = (
+				D289CCBD1EE111B400104EF9 /* Adjective Classes */,
+				D2A88E601EC2004700F83386 /* Noun Classes */,
+				D289CCC21EE119B700104EF9 /* Preposition Classes */,
+				D20B6AE81EDFC7FD00B32B76 /* Verb Classes */,
+				D2B106AD1EC01C2E006163DC /* Main.storyboard */,
+				D2B106B01EC01C2E006163DC /* Assets.xcassets */,
+				D2B106B21EC01C2E006163DC /* LaunchScreen.storyboard */,
+				D2B106B51EC01C2E006163DC /* Info.plist */,
+				D20B6AE71EDFC77A00B32B76 /* Supporting Files */,
+			);
+			path = IrishVocabulary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2B106A51EC01C2E006163DC /* IrishVocabulary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2B106B81EC01C2E006163DC /* Build configuration list for PBXNativeTarget "IrishVocabulary" */;
+			buildPhases = (
+				5EE5002CCCE8593B9918D00C /* [CP] Check Pods Manifest.lock */,
+				D2B106A21EC01C2E006163DC /* Sources */,
+				D2B106A31EC01C2E006163DC /* Frameworks */,
+				D2B106A41EC01C2E006163DC /* Resources */,
+				09A52F5713D2C678AA13B4C5 /* [CP] Embed Pods Frameworks */,
+				5A94BDDD02FBFF1D2C31DDC0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IrishVocabulary;
+			productName = IrishVocabulary;
+			productReference = D2B106A61EC01C2E006163DC /* IrishVocabulary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2B1069E1EC01C2E006163DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Scott;
+				TargetAttributes = {
+					D2B106A51EC01C2E006163DC = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = WEW965C484;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = D2B106A11EC01C2E006163DC /* Build configuration list for PBXProject "IrishVocabulary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2B1069D1EC01C2E006163DC;
+			productRefGroup = D2B106A71EC01C2E006163DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2B106A51EC01C2E006163DC /* IrishVocabulary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2B106A41EC01C2E006163DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D220B41D1EC341F100667ECD /* default.realm in Resources */,
+				D2B106B41EC01C2E006163DC /* LaunchScreen.storyboard in Resources */,
+				D2B106B11EC01C2E006163DC /* Assets.xcassets in Resources */,
+				D2B106AF1EC01C2E006163DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09A52F5713D2C678AA13B4C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IrishVocabulary/Pods-IrishVocabulary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A94BDDD02FBFF1D2C31DDC0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IrishVocabulary/Pods-IrishVocabulary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EE5002CCCE8593B9918D00C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2B106A21EC01C2E006163DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20B6AEA1EDFD0BF00B32B76 /* Verb.swift in Sources */,
+				D24D6D741EE1A8BA00A236B2 /* PrepositionViewController.swift in Sources */,
+				D2F42B831EE2723E003C72B8 /* VerbDetailViewController.swift in Sources */,
+				D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */,
+				D289CCC81EE11F5600104EF9 /* SimplePreposition.swift in Sources */,
+				D2F42B851EE27570003C72B8 /* VerbTenseTableViewController.swift in Sources */,
+				D2B106AC1EC01C2E006163DC /* ViewController.swift in Sources */,
+				D289CCBF1EE111FF00104EF9 /* Adjective.swift in Sources */,
+				D2F42B871EE276A5003C72B8 /* VerbParts.swift in Sources */,
+				D2B106AA1EC01C2E006163DC /* AppDelegate.swift in Sources */,
+				D289CCC11EE1129500104EF9 /* AdjectiveTableViewController.swift in Sources */,
+				D291CEE51EDF0E59004A4FF3 /* Section.swift in Sources */,
+				D2A88E621EC2009900F83386 /* Noun.swift in Sources */,
+				D289CCC41EE11F3600104EF9 /* CompoundPreposition.swift in Sources */,
+				D24D6D721EE059CA00A236B2 /* VerbTableViewController.swift in Sources */,
+				D2A88E641EC200CC00F83386 /* NounTableViewController.swift in Sources */,
+				D289CCC61EE11F4900104EF9 /* PrepositionalPronoun.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2B106AD1EC01C2E006163DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2B106AE1EC01C2E006163DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D2B106B21EC01C2E006163DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2B106B31EC01C2E006163DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2B106B61EC01C2E006163DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2B106B71EC01C2E006163DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2B106B91EC01C2E006163DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53733A7D740AB59E94052378 /* Pods-IrishVocabulary.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WEW965C484;
+				INFOPLIST_FILE = IrishVocabulary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teangacha.com.IrishVocabulary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		D2B106BA1EC01C2E006163DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8F32C3B96D53FBF48AA16AF /* Pods-IrishVocabulary.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = WEW965C484;
+				INFOPLIST_FILE = IrishVocabulary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = teangacha.com.IrishVocabulary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2B106A11EC01C2E006163DC /* Build configuration list for PBXProject "IrishVocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B106B61EC01C2E006163DC /* Debug */,
+				D2B106B71EC01C2E006163DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2B106B81EC01C2E006163DC /* Build configuration list for PBXNativeTarget "IrishVocabulary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2B106B91EC01C2E006163DC /* Debug */,
+				D2B106BA1EC01C2E006163DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2B1069E1EC01C2E006163DC /* Project object */;
+}
