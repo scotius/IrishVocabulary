@@ -25,6 +25,7 @@
 		D2B106AF1EC01C2E006163DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106AD1EC01C2E006163DC /* Main.storyboard */; };
 		D2B106B11EC01C2E006163DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B01EC01C2E006163DC /* Assets.xcassets */; };
 		D2B106B41EC01C2E006163DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B21EC01C2E006163DC /* LaunchScreen.storyboard */; };
+		D2DEF10B1F09756400DBEDFF /* VerbTenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEF10A1F09756400DBEDFF /* VerbTenseSection.swift */; };
 		D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F1B9BA1ECD544F0080CC24 /* Entry.swift */; };
 		D2F42B831EE2723E003C72B8 /* VerbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */; };
 		D2F42B851EE27570003C72B8 /* VerbTenseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		D2B106B01EC01C2E006163DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B106B31EC01C2E006163DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2B106B51EC01C2E006163DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2DEF10A1F09756400DBEDFF /* VerbTenseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTenseSection.swift; sourceTree = "<group>"; };
 		D2F1B9BA1ECD544F0080CC24 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbDetailViewController.swift; sourceTree = "<group>"; };
 		D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTenseTableViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				D2F42B861EE276A5003C72B8 /* VerbParts.swift */,
 				D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */,
 				D2F42B841EE27570003C72B8 /* VerbTenseTableViewController.swift */,
+				D2DEF10A1F09756400DBEDFF /* VerbTenseSection.swift */,
 			);
 			name = "Verb Classes";
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */,
 				D289CCC81EE11F5600104EF9 /* SimplePreposition.swift in Sources */,
 				D2F42B851EE27570003C72B8 /* VerbTenseTableViewController.swift in Sources */,
+				D2DEF10B1F09756400DBEDFF /* VerbTenseSection.swift in Sources */,
 				D2B106AC1EC01C2E006163DC /* ViewController.swift in Sources */,
 				D289CCBF1EE111FF00104EF9 /* Adjective.swift in Sources */,
 				D2F42B871EE276A5003C72B8 /* VerbParts.swift in Sources */,
