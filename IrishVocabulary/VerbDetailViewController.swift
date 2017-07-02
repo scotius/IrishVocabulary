@@ -264,6 +264,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func simplePastPressed(_ sender: UIButton) {
         
+        self.tense = "simplePast"
+        verbTense.removeAll()
         verbTense.append(verb.simplePast1stPersonSingPos)
         verbTense.append(verb.simplePast1stPersonSingInter)
         verbTense.append(verb.simplePast1stPersonSingNeg)
@@ -339,7 +341,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func habitualPastPressed(_ sender: Any) {
         
-        tense = "habitualPast"
+        self.tense = "habitualPast"
+        verbTense.removeAll()
         verbTense.append(verb.habitualPast1stPersonSingPos)
         verbTense.append(verb.habitualPast1stPersonSingInter)
         verbTense.append(verb.habitualPast1stPersonSingNeg)
@@ -376,7 +379,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func presentPressed(_ sender: Any) {
         
-        tense = "present"
+        self.tense = "present"
+        verbTense.removeAll()
         verbTense.append(verb.present1stPersonSingPos)
         verbTense.append(verb.present1stPersonSingInter)
         verbTense.append(verb.present1stPersonSingNeg)
@@ -410,7 +414,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func futurePressed(_ sender: Any) {
         
-        tense = "future"
+        self.tense = "future"
+        verbTense.removeAll()
         verbTense.append(verb.future1stPersonSingPos)
         verbTense.append(verb.future1stPersonSingInter)
         verbTense.append(verb.future1stPersonSingNeg)
@@ -444,7 +449,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func conditionalPressed(_ sender: Any) {
         
-        tense = "conditional"
+        self.tense = "conditional"
+        verbTense.removeAll()
         verbTense.append(verb.conditional1stPersonSingPos)
         verbTense.append(verb.conditional1stPersonSingInter)
         verbTense.append(verb.conditional1stPersonSingNeg)
@@ -479,7 +485,8 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func presentSubjunctivePressed(_ sender: Any) {
         
-        tense = "presentSubjunctive"
+        self.tense = "presentSubjunctive"
+        verbTense.removeAll()
         verbTense.append(verb.presentSubjunctive1stPersonSingPos)
         verbTense.append(verb.presentSubjunctive1stPersonSingNeg)
         verbTense.append(verb.presentSubjunctive2ndPersonSingPos)
@@ -501,7 +508,8 @@ class VerbDetailViewController : UIViewController {
     
     
     @IBAction func imperativePressed(_ sender: Any) {
-        tense = "imperative"
+        self.tense = "imperative"
+        verbTense.removeAll()
         verbTense.append(verb.imperative1stPersonSingPos)
         verbTense.append(verb.imperative1stPersonSingNeg)
         verbTense.append(verb.imperative2ndPersonSingPos)
