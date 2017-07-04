@@ -8,11 +8,16 @@
 
 import Foundation
 
-struct VerbTenseSection {
+class VerbTenseSection {
     
     
     
     var heading : String
     var items : [String]
+    
+    init() {
+        heading = ""
+        items = []
+    }
     
 }
