@@ -12,6 +12,8 @@
 		D220B41D1EC341F100667ECD /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = D220B41C1EC341F100667ECD /* default.realm */; };
 		D24D6D721EE059CA00A236B2 /* VerbTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */; };
 		D24D6D741EE1A8BA00A236B2 /* PrepositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D6D731EE1A8BA00A236B2 /* PrepositionViewController.swift */; };
+		D277F71D1F0C76CB00395301 /* AdjectiveSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277F71C1F0C76CB00395301 /* AdjectiveSection.swift */; };
+		D277F71F1F0C76EB00395301 /* NounSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D277F71E1F0C76EB00395301 /* NounSections.swift */; };
 		D289CCBF1EE111FF00104EF9 /* Adjective.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCBE1EE111FF00104EF9 /* Adjective.swift */; };
 		D289CCC11EE1129500104EF9 /* AdjectiveTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */; };
 		D289CCC41EE11F3600104EF9 /* CompoundPreposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC31EE11F3600104EF9 /* CompoundPreposition.swift */; };
@@ -40,6 +42,8 @@
 		D220B41C1EC341F100667ECD /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; path = default.realm; sourceTree = "<group>"; };
 		D24D6D711EE059CA00A236B2 /* VerbTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTableViewController.swift; sourceTree = "<group>"; };
 		D24D6D731EE1A8BA00A236B2 /* PrepositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepositionViewController.swift; sourceTree = "<group>"; };
+		D277F71C1F0C76CB00395301 /* AdjectiveSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjectiveSection.swift; sourceTree = "<group>"; };
+		D277F71E1F0C76EB00395301 /* NounSections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NounSections.swift; sourceTree = "<group>"; };
 		D289CCBE1EE111FF00104EF9 /* Adjective.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Adjective.swift; sourceTree = "<group>"; };
 		D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjectiveTableViewController.swift; sourceTree = "<group>"; };
 		D289CCC31EE11F3600104EF9 /* CompoundPreposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundPreposition.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				D289CCBE1EE111FF00104EF9 /* Adjective.swift */,
 				D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */,
+				D277F71C1F0C76CB00395301 /* AdjectiveSection.swift */,
 			);
 			name = "Adjective Classes";
 			path = ..;
@@ -141,6 +146,7 @@
 			children = (
 				D2A88E611EC2009900F83386 /* Noun.swift */,
 				D2A88E631EC200CC00F83386 /* NounTableViewController.swift */,
+				D277F71E1F0C76EB00395301 /* NounSections.swift */,
 			);
 			name = "Noun Classes";
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D20B6AEA1EDFD0BF00B32B76 /* Verb.swift in Sources */,
+				D277F71F1F0C76EB00395301 /* NounSections.swift in Sources */,
 				D24D6D741EE1A8BA00A236B2 /* PrepositionViewController.swift in Sources */,
 				D2F42B831EE2723E003C72B8 /* VerbDetailViewController.swift in Sources */,
 				D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */,
@@ -323,6 +330,7 @@
 				D24D6D721EE059CA00A236B2 /* VerbTableViewController.swift in Sources */,
 				D2A88E641EC200CC00F83386 /* NounTableViewController.swift in Sources */,
 				D289CCC61EE11F4900104EF9 /* PrepositionalPronoun.swift in Sources */,
+				D277F71D1F0C76CB00395301 /* AdjectiveSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
