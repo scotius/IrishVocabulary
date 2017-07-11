@@ -15,6 +15,7 @@ class VerbTableViewController: UITableViewController {
     var entryArray = [Entry]()
     var sectionsArray = [Section]()
     var selectedVerb = ""
+    var parts = VerbParts()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -29,6 +29,7 @@ class VerbDetailViewController : UIViewController {
     var tense = ""
     var verbName = ""
     var verb = Verb()
+    var parts = VerbParts()
     var singularItems = [String]()
     var pluralItems = [String]()
     var impersonalItems = [String]()
@@ -255,37 +256,35 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func simplePastPressed(_ sender: UIButton) {
        tense = "simplePast"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.simplePast1stPersonSingPos)
-        singularItems.append(verb.simplePast1stPersonSingInter)
-        singularItems.append(verb.simplePast1stPersonSingNeg)
-        singularItems.append(verb.simplePast2ndPersonSingPos)
-        singularItems.append(verb.simplePast2ndPersonSingInter)
-        singularItems.append(verb.simplePast2ndPersonSingNeg)
-        singularItems.append(verb.simplePast3rdPersonSingPos)
-        singularItems.append(verb.simplePast3rdPersonSingInter)
-        singularItems.append(verb.simplePast3rdPersonSingNeg)
-        pluralItems.append(verb.simplePast1stPersonPlPosAlt)
-        pluralItems.append(verb.simplePast1stPersonPlInterAlt)
-        pluralItems.append(verb.simplePast1stPersonPlNegAlt)
-        pluralItems.append(verb.simplePast1stPersonPlPos)
-        pluralItems.append(verb.simplePast1stPersonPlInter)
-        pluralItems.append(verb.simplePast1stPersonPlNeg)
-        pluralItems.append(verb.simplePast2ndPersonPlPos)
-        pluralItems.append(verb.simplePast2ndPersonPlInter)
-        pluralItems.append(verb.simplePast2ndPersonPlNeg)
-        pluralItems.append(verb.simplePast3rdPersonPlPos)
-        pluralItems.append(verb.simplePast3rdPersonPlInter)
-        pluralItems.append(verb.simplePast3rdPersonPlNeg)
-        pluralItems.append(verb.simplePast3rdPersonPlPosAlt)
-        pluralItems.append(verb.simplePast3rdPersonPlInterAlt)
-        pluralItems.append(verb.simplePast3rdPersonPlNegAlt)
-        impersonalItems.append(verb.simplePastImpersonalPos)
-        impersonalItems.append(verb.simplePastImpersonalInter)
-        impersonalItems.append(verb.simplePastImpersonalNeg)
-        
+
+        parts.firstPersonSingPos = verb.simplePast1stPersonSingPos
+        parts.firstPersonSingInter = verb.simplePast1stPersonSingInter
+        parts.firstPersonSingNeg = verb.simplePast1stPersonSingNeg
+        parts.secondPersonSingPos = verb.simplePast2ndPersonSingPos
+        parts.secondPersonSingInter = verb.simplePast2ndPersonSingInter
+        parts.secondPersonSingNeg = verb.simplePast2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.simplePast3rdPersonSingPos
+        parts.thirdPersonSingInter = verb.simplePast3rdPersonSingInter
+        parts.thirdPersonSingNeg = verb.simplePast3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.simplePast1stPersonPlPosAlt
+        parts.firstPersonPlInterAlt = verb.simplePast1stPersonPlInterAlt
+        parts.firstPersonPlNegAlt = verb.simplePast1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.simplePast1stPersonPlPos
+        parts.firstPersonPlInter = verb.simplePast1stPersonPlInter
+        parts.firstPersonPlNeg = verb.simplePast1stPersonPlNeg
+        parts.secondPersonPlPos = verb.simplePast2ndPersonPlPos
+        parts.secondPersonPlInter = verb.simplePast2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.simplePast2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.simplePast3rdPersonPlPos
+        parts.thirdPersonPlInter = verb.simplePast3rdPersonPlInter
+        parts.thirdPersonPlNeg = verb.simplePast3rdPersonPlNeg
+        parts.thirdPersonPlPosAlt = verb.simplePast3rdPersonPlPosAlt
+        parts.thirdPersonPlInterAlt = verb.simplePast3rdPersonPlInterAlt
+        parts.thirdPersonPlNegAlt  = verb.simplePast3rdPersonPlNegAlt
+        parts.impersonalPos = verb.simplePastImpersonalPos
+        parts.impersonalInter = verb.simplePastImpersonalInter
+        parts.impersonalNeg = verb.simplePastImpersonalNeg
+        createTenseSections()
 
         
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
@@ -302,37 +301,34 @@ class VerbDetailViewController : UIViewController {
     @IBAction func habitualPastPressed(_ sender: Any) {
         
         tense = "habitualPast"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.habitualPast1stPersonSingPos)
-        singularItems.append(verb.habitualPast1stPersonSingInter)
-        singularItems.append(verb.habitualPast1stPersonSingNeg)
-        singularItems.append(verb.habitualPast2ndPersonSingPos)
-        singularItems.append(verb.habitualPast2ndPersonSingInter)
-        singularItems.append(verb.habitualPast2ndPersonSingNeg)
-        singularItems.append(verb.habitualPast3rdPersonSingPos)
-        singularItems.append(verb.habitualPast3rdPersonSingInter)
-        singularItems.append(verb.habitualPast3rdPersonSingNeg)
-        pluralItems.append(verb.habitualPast1stPersonPlPosAlt)
-        pluralItems.append(verb.habitualPast1stPersonPlInterAlt)
-        pluralItems.append(verb.habitualPast1stPersonPlNegAlt)
-        pluralItems.append(verb.habitualPast1stPersonPlPos)
-        pluralItems.append(verb.habitualPast1stPersonPlInter)
-        pluralItems.append(verb.habitualPast1stPersonPlNeg)
-        pluralItems.append(verb.habitualPast2ndPersonPlPos)
-        pluralItems.append(verb.habitualPast2ndPersonPlInter)
-        pluralItems.append(verb.habitualPast2ndPersonPlNeg)
-        pluralItems.append(verb.habitualPast3rdPersonPlPos)
-        pluralItems.append(verb.habitualPast3rdPersonPlInter)
-        pluralItems.append(verb.habitualPast3rdPersonPlNeg)
-        pluralItems.append(verb.habitualPast3rdPersonPlPosAlt)
-        pluralItems.append(verb.habitualPast3rdPersonPlInterAlt)
-        pluralItems.append(verb.habitualPast3rdPersonPlNegAlt)
-        impersonalItems.append(verb.habitualPastImpersonalPos)
-        impersonalItems.append(verb.habitualPastImpersonalInter)
-        impersonalItems.append(verb.habitualPastImpersonalNeg)
-        
+        parts.firstPersonSingPos = verb.habitualPast1stPersonSingPos
+        parts.firstPersonSingInter = verb.habitualPast1stPersonSingInter
+        parts.firstPersonSingNeg = verb.habitualPast1stPersonSingNeg
+        parts.secondPersonSingPos = verb.habitualPast2ndPersonSingPos
+        parts.secondPersonSingInter = verb.habitualPast2ndPersonSingInter
+        parts.secondPersonSingNeg = verb.habitualPast2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.habitualPast3rdPersonSingPos
+        parts.thirdPersonSingInter = verb.habitualPast3rdPersonSingInter
+        parts.thirdPersonSingNeg = verb.habitualPast3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.habitualPast1stPersonPlPosAlt
+        parts.firstPersonPlInterAlt = verb.habitualPast1stPersonPlInterAlt
+        parts.firstPersonPlNegAlt = verb.habitualPast1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.habitualPast1stPersonPlPos
+        parts.firstPersonPlInter = verb.habitualPast1stPersonPlInter
+        parts.firstPersonPlNeg = verb.habitualPast1stPersonPlNeg
+        parts.secondPersonPlPos = verb.habitualPast2ndPersonPlPos
+        parts.secondPersonPlInter = verb.habitualPast2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.habitualPast2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.habitualPast3rdPersonPlPos
+        parts.thirdPersonPlInter = verb.habitualPast3rdPersonPlInter
+        parts.thirdPersonPlNeg = verb.habitualPast3rdPersonPlNeg
+        parts.thirdPersonPlPosAlt = verb.habitualPast3rdPersonPlPosAlt
+        parts.thirdPersonPlInterAlt = verb.habitualPast3rdPersonPlInterAlt
+        parts.thirdPersonPlNegAlt  = verb.habitualPast3rdPersonPlNegAlt
+        parts.impersonalPos = verb.habitualPastImpersonalPos
+        parts.impersonalInter = verb.habitualPastImpersonalInter
+        parts.impersonalNeg = verb.habitualPastImpersonalNeg
+        createTenseSections()
         
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
     }
@@ -342,34 +338,32 @@ class VerbDetailViewController : UIViewController {
     @IBAction func presentPressed(_ sender: Any) {
         
         tense = "present"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.present1stPersonSingPos)
-        singularItems.append(verb.present1stPersonSingInter)
-        singularItems.append(verb.present1stPersonSingNeg)
-        singularItems.append(verb.present2ndPersonSingPos)
-        singularItems.append(verb.present2ndPersonSingInter)
-        singularItems.append(verb.present2ndPersonSingNeg)
-        singularItems.append(verb.present3rdPersonSingPos)
-        singularItems.append(verb.present3rdPersonSingInter)
-        singularItems.append(verb.present3rdPersonSingNeg)
-        pluralItems.append(verb.present1stPersonPlPosAlt)
-        pluralItems.append(verb.present1stPersonPlInterAlt)
-        pluralItems.append(verb.present1stPersonPlNegAlt)
-        pluralItems.append(verb.present1stPersonPlPos)
-        pluralItems.append(verb.present1stPersonPlInter)
-        pluralItems.append(verb.present1stPersonPlNeg)
-        pluralItems.append(verb.present2ndPersonPlPos)
-        pluralItems.append(verb.present2ndPersonPlInter)
-        pluralItems.append(verb.present2ndPersonPlNeg)
-        pluralItems.append(verb.present3rdPersonPlPos)
-        pluralItems.append(verb.present3rdPersonPlInter)
-        pluralItems.append(verb.present3rdPersonPlNeg)
-        impersonalItems.append(verb.presentImpersonalPos)
-        impersonalItems.append(verb.presentImpersonalInter)
-        impersonalItems.append(verb.presentImpersonalNeg)
         
+        parts.firstPersonSingPos = verb.present1stPersonSingPos
+        parts.firstPersonSingInter = verb.present1stPersonSingInter
+        parts.firstPersonSingNeg = verb.present1stPersonSingNeg
+        parts.secondPersonSingPos = verb.present2ndPersonSingPos
+        parts.secondPersonSingInter = verb.present2ndPersonSingInter
+        parts.secondPersonSingNeg = verb.present2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.present3rdPersonSingPos
+        parts.thirdPersonSingInter = verb.present3rdPersonSingInter
+        parts.thirdPersonSingNeg = verb.present3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.present1stPersonPlPosAlt
+        parts.firstPersonPlInterAlt = verb.present1stPersonPlInterAlt
+        parts.firstPersonPlNegAlt = verb.present1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.present1stPersonPlPos
+        parts.firstPersonPlInter = verb.present1stPersonPlInter
+        parts.firstPersonPlNeg = verb.present1stPersonPlNeg
+        parts.secondPersonPlPos = verb.present2ndPersonPlPos
+        parts.secondPersonPlInter = verb.present2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.present2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.present3rdPersonPlPos
+        parts.thirdPersonPlInter = verb.present3rdPersonPlInter
+        parts.thirdPersonPlNeg = verb.present3rdPersonPlNeg
+        parts.impersonalPos = verb.presentImpersonalPos
+        parts.impersonalInter = verb.presentImpersonalInter
+        parts.impersonalNeg = verb.presentImpersonalNeg
+        createTenseSections()
         
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
         
@@ -379,34 +373,32 @@ class VerbDetailViewController : UIViewController {
     @IBAction func futurePressed(_ sender: Any) {
         
         tense = "future"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.future1stPersonSingPos)
-        singularItems.append(verb.future1stPersonSingInter)
-        singularItems.append(verb.future1stPersonSingNeg)
-        singularItems.append(verb.future2ndPersonSingPos)
-        singularItems.append(verb.future2ndPersonSingInter)
-        singularItems.append(verb.future2ndPersonSingNeg)
-        singularItems.append(verb.future3rdPersonSingPos)
-        singularItems.append(verb.future3rdPersonSingInter)
-        singularItems.append(verb.future3rdPersonSingNeg)
-        pluralItems.append(verb.future1stPersonPlPosAlt)
-        pluralItems.append(verb.future1stPersonPlInterAlt)
-        pluralItems.append(verb.future1stPersonPlNegAlt)
-        pluralItems.append(verb.future1stPersonPlPos)
-        pluralItems.append(verb.future1stPersonPlInter)
-        pluralItems.append(verb.future1stPersonPlNeg)
-        pluralItems.append(verb.future2ndPersonPlPos)
-        pluralItems.append(verb.future2ndPersonPlInter)
-        pluralItems.append(verb.future2ndPersonPlNeg)
-        pluralItems.append(verb.future3rdPersonPlPos)
-        pluralItems.append(verb.future3rdPersonPlInter)
-        pluralItems.append(verb.future3rdPersonPlNeg)
-        impersonalItems.append(verb.futureImpersonalPos)
-        impersonalItems.append(verb.futureImpersonalInter)
-        impersonalItems.append(verb.futureImpersonalNeg)
         
+        parts.firstPersonSingPos = verb.future1stPersonSingPos
+        parts.firstPersonSingInter = verb.future1stPersonSingInter
+        parts.firstPersonSingNeg = verb.future1stPersonSingNeg
+        parts.secondPersonSingPos = verb.future2ndPersonSingPos
+        parts.secondPersonSingInter = verb.future2ndPersonSingInter
+        parts.secondPersonSingNeg = verb.future2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.future3rdPersonSingPos
+        parts.thirdPersonSingInter = verb.future3rdPersonSingInter
+        parts.thirdPersonSingNeg = verb.future3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.future1stPersonPlPosAlt
+        parts.firstPersonPlInterAlt = verb.future1stPersonPlInterAlt
+        parts.firstPersonPlNegAlt = verb.future1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.future1stPersonPlPos
+        parts.firstPersonPlInter = verb.future1stPersonPlInter
+        parts.firstPersonPlNeg = verb.future1stPersonPlNeg
+        parts.secondPersonPlPos = verb.future2ndPersonPlPos
+        parts.secondPersonPlInter = verb.future2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.future2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.future3rdPersonPlPos
+        parts.thirdPersonPlInter = verb.future3rdPersonPlInter
+        parts.thirdPersonPlNeg = verb.future3rdPersonPlNeg
+        parts.impersonalPos = verb.futureImpersonalPos
+        parts.impersonalInter = verb.futureImpersonalInter
+        parts.impersonalNeg = verb.futureImpersonalNeg
+        createTenseSections()
         
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
         
@@ -416,36 +408,36 @@ class VerbDetailViewController : UIViewController {
     @IBAction func conditionalPressed(_ sender: Any) {
         
         tense = "conditional"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.conditional1stPersonSingPos)
-        singularItems.append(verb.conditional1stPersonSingInter)
-        singularItems.append(verb.conditional1stPersonSingNeg)
-        singularItems.append(verb.conditional2ndPersonSingPos)
-        singularItems.append(verb.conditional2ndPersonSingInter)
-        singularItems.append(verb.conditional2ndPersonSingNeg)
-        singularItems.append(verb.conditional3rdPersonSingPos)
-        singularItems.append(verb.conditional3rdPersonSingInter)
-        singularItems.append(verb.conditional3rdPersonSingNeg)
-        pluralItems.append(verb.conditional1stPersonPlPosAlt)
-        pluralItems.append(verb.conditional1stPersonPlInterAlt)
-        pluralItems.append(verb.conditional1stPersonPlNegAlt)
-        pluralItems.append(verb.conditional1stPersonPlPos)
-        pluralItems.append(verb.conditional1stPersonPlInter)
-        pluralItems.append(verb.conditional1stPersonPlNeg)
-        pluralItems.append(verb.conditional2ndPersonPlPos)
-        pluralItems.append(verb.conditional2ndPersonPlInter)
-        pluralItems.append(verb.conditional2ndPersonPlNeg)
-        pluralItems.append(verb.conditional3rdPersonPlPos)
-        pluralItems.append(verb.conditional3rdPersonPlInter)
-        pluralItems.append(verb.conditional3rdPersonPlNeg)
-        pluralItems.append(verb.conditional3rdPersonPlPosAlt)
-        pluralItems.append(verb.conditional3rdPersonPlInterAlt)
-        pluralItems.append(verb.conditional3rdPersonPlNegAlt)
-        impersonalItems.append(verb.conditionalImpersonalPos)
-        impersonalItems.append(verb.conditionalImpersonalInter)
-        impersonalItems.append(verb.conditionalImpersonalNeg)
+
+        parts.firstPersonSingPos = verb.conditional1stPersonSingPos
+        parts.firstPersonSingInter = verb.conditional1stPersonSingInter
+        parts.firstPersonSingNeg = verb.conditional1stPersonSingNeg
+        parts.secondPersonSingPos = verb.conditional2ndPersonSingPos
+        parts.secondPersonSingInter = verb.conditional2ndPersonSingInter
+        parts.secondPersonSingNeg = verb.conditional2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.conditional3rdPersonSingPos
+        parts.thirdPersonSingInter = verb.conditional3rdPersonSingInter
+        parts.thirdPersonSingNeg = verb.conditional3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.conditional1stPersonPlPosAlt
+        parts.firstPersonPlInterAlt = verb.conditional1stPersonPlInterAlt
+        parts.firstPersonPlNegAlt = verb.conditional1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.conditional1stPersonPlPos
+        parts.firstPersonPlInter = verb.conditional1stPersonPlInter
+        parts.firstPersonPlNeg = verb.conditional1stPersonPlNeg
+        parts.secondPersonPlPos = verb.conditional2ndPersonPlPos
+        parts.secondPersonPlInter = verb.conditional2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.conditional2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.conditional3rdPersonPlPos
+        parts.thirdPersonPlInter = verb.conditional3rdPersonPlInter
+        parts.thirdPersonPlNeg = verb.conditional3rdPersonPlNeg
+        parts.thirdPersonPlPosAlt = verb.conditional3rdPersonPlPosAlt
+        parts.thirdPersonPlInterAlt = verb.conditional3rdPersonPlInterAlt
+        parts.thirdPersonPlNegAlt  = verb.conditional3rdPersonPlNegAlt
+        parts.impersonalPos = verb.conditionalImpersonalPos
+        parts.impersonalInter = verb.conditionalImpersonalInter
+        parts.impersonalNeg = verb.conditionalImpersonalNeg
+        createTenseSections()
+        
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
         
     }
@@ -454,25 +446,27 @@ class VerbDetailViewController : UIViewController {
     @IBAction func presentSubjunctivePressed(_ sender: Any) {
         
         tense = "presentSubjunctive"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.presentSubjunctive1stPersonSingPos)
-        singularItems.append(verb.presentSubjunctive1stPersonSingNeg)
-        singularItems.append(verb.presentSubjunctive2ndPersonSingPos)
-        singularItems.append(verb.presentSubjunctive2ndPersonSingNeg)
-        singularItems.append(verb.presentSubjunctive3rdPersonSingPos)
-        singularItems.append(verb.presentSubjunctive3rdPersonSingNeg)
-        pluralItems.append(verb.presentSubjunctive1stPersonPlPosAlt)
-        pluralItems.append(verb.presentSubjunctive1stPersonPlNegAlt)
-        pluralItems.append(verb.presentSubjunctive1stPersonPlPos)
-        pluralItems.append(verb.presentSubjunctive1stPersonPlNeg)
-        pluralItems.append(verb.presentSubjunctive2ndPersonPlPos)
-        pluralItems.append(verb.presentSubjunctive2ndPersonPlNeg)
-        pluralItems.append(verb.presentSubjunctive3rdPersonPlPos)
-        pluralItems.append(verb.presentSubjunctive3rdPersonPlNeg)
-        impersonalItems.append(verb.presentSubjunctiveImpersonalPos)
-        impersonalItems.append(verb.presentSubjunctiveImpersonalNeg)
+        
+        parts.firstPersonSingPos = verb.presentSubjunctive1stPersonSingPos
+        parts.firstPersonSingNeg = verb.presentSubjunctive1stPersonSingNeg
+        parts.secondPersonSingPos = verb.presentSubjunctive2ndPersonSingPos
+        parts.secondPersonSingNeg = verb.presentSubjunctive2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.presentSubjunctive3rdPersonSingPos
+        parts.thirdPersonSingNeg = verb.presentSubjunctive3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.presentSubjunctive1stPersonPlPosAlt
+        parts.firstPersonPlNegAlt = verb.presentSubjunctive1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.presentSubjunctive1stPersonPlPos
+        parts.firstPersonPlNeg = verb.presentSubjunctive1stPersonPlNeg
+        parts.secondPersonPlPos = verb.presentSubjunctive2ndPersonPlPos
+        parts.secondPersonPlInter = verb.presentSubjunctive2ndPersonPlInter
+        parts.secondPersonPlNeg = verb.presentSubjunctive2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.presentSubjunctive3rdPersonPlPos
+        parts.thirdPersonPlNeg = verb.presentSubjunctive3rdPersonPlNeg
+        parts.thirdPersonPlPosAlt = verb.presentSubjunctive3rdPersonPlPosAlt
+        parts.thirdPersonPlNegAlt  = verb.presentSubjunctive3rdPersonPlNegAlt
+        parts.impersonalPos = verb.presentSubjunctiveImpersonalPos
+        parts.impersonalNeg = verb.presentSubjunctiveImpersonalNeg
+        createTenseSections()
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
     }
     
@@ -507,12 +501,13 @@ class VerbDetailViewController : UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "verbDetailToVerbTense"{
-            let detailVC = segue.destination as! VerbTenseTableViewController
-            detailVC.verb = self.verb
-            detailVC.tense = self.tense
-            detailVC.singularItems = self.singularItems
-            detailVC.pluralItems = self.pluralItems
-            detailVC.impersonalItems = self.impersonalItems
+            let tenseVC = segue.destination as! VerbTenseTableViewController
+            tenseVC.verb = self.verb
+            tenseVC.tense = self.tense
+            tenseVC.parts = self.parts
+            tenseVC.singularItems = self.singularItems
+            tenseVC.pluralItems = self.pluralItems
+            tenseVC.impersonalItems = self.impersonalItems
             
             
         }
@@ -520,7 +515,41 @@ class VerbDetailViewController : UIViewController {
         
     }
     
-    
+    func createTenseSections() {
+        singularItems.removeAll()
+        pluralItems.removeAll()
+        impersonalItems.removeAll()
+        
+        singularItems.append(parts.firstPersonSingPos)
+        singularItems.append(parts.firstPersonSingInter)
+        singularItems.append(parts.firstPersonSingNeg)
+        singularItems.append(parts.secondPersonSingPos)
+        singularItems.append(parts.secondPersonSingInter)
+        singularItems.append(parts.secondPersonSingNeg)
+        singularItems.append(parts.thirdPersonSingPos)
+        singularItems.append(parts.thirdPersonSingInter)
+        singularItems.append(parts.thirdPersonSingNeg)
+        pluralItems.append(parts.firstPersonPlPosAlt)
+        pluralItems.append(parts.firstPersonPlInterAlt)
+        pluralItems.append(parts.firstPersonPlNegAlt)
+        pluralItems.append(parts.firstPersonPlPos)
+        pluralItems.append(parts.firstPersonPlInter)
+        pluralItems.append(parts.firstPersonPlNeg)
+        pluralItems.append(parts.secondPersonPlPos)
+        pluralItems.append(parts.secondPersonPlInter)
+        pluralItems.append(parts.secondPersonPlNeg)
+        pluralItems.append(parts.thirdPersonPlPos)
+        pluralItems.append(parts.thirdPersonPlInter)
+        pluralItems.append(parts.thirdPersonPlNeg)
+        pluralItems.append(parts.thirdPersonPlPosAlt)
+        pluralItems.append(parts.thirdPersonPlInterAlt)
+        pluralItems.append(parts.thirdPersonPlNegAlt)
+        impersonalItems.append(parts.impersonalPos)
+        impersonalItems.append(parts.impersonalInter)
+        impersonalItems.append(parts.impersonalNeg)
+        
+        
+    }
     
     
     

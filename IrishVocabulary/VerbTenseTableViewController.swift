@@ -13,9 +13,11 @@ import UIKit
 class VerbTenseTableViewController : UITableViewController {
     
     
+
+    @IBOutlet weak var segment: UISegmentedControl!
     var sectionsArray = [VerbTenseSection]()
     var verb = Verb()
-    var verbParts = VerbParts()
+    var parts = VerbParts()
     var tense = ""
     var singularItems = [String]()
     var pluralItems = [String]()
@@ -37,12 +39,10 @@ class VerbTenseTableViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return sectionsArray[section].items.count
+                return sectionsArray[section].items.count
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return sectionsArray.count
+                return sectionsArray.count
     }
     
     func createVerbTenseSections() {
@@ -67,13 +67,55 @@ class VerbTenseTableViewController : UITableViewController {
     }
     
     /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "sectionCell", for: indexPath)
+    @IBAction func segmentPressed(_ sender: Any) {
         
-        // Configure the cell...
-        cell.textLabel?.text = sections[indexPath.section].items[indexPath.row]
+        switch sender.selectedSegmentIndex {
+        case 0:
+            firstSingularLabel.text = verbParts.firstPersonSingPos
+            secondSingularLabel.text = verbParts.secondPersonSingPos
+            thirdSingularLabel.text = verbParts.thirdPersonSingPos
+            firstPluralLabel.text = verbParts.firstPersonPlPos
+            firstPluralAlternateLabel.text = verbParts.firstPersonPlPosAlt
+            secondPluralLabel.text = verbParts.secondPersonPlPos
+            thirdPluralLabel.text = verbParts.thirdPersonPlPos
+            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlPosAlt
+            
+        case 1:
+            
+            firstSingularLabel.text = verbParts.firstPersonSingNeg
+            secondSingularLabel.text = verbParts.secondPersonSingNeg
+            thirdSingularLabel.text = verbParts.thirdPersonSingNeg
+            firstPluralLabel.text = verbParts.firstPersonPlNeg
+            firstPluralAlternateLabel.text = verbParts.firstPersonPlNegAlt
+            secondPluralLabel.text = verbParts.secondPersonPlNeg
+            thirdPluralLabel.text = verbParts.thirdPersonPlNeg
+            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlNegAlt
+            
+        case 2:
+            firstSingularLabel.text = verbParts.firstPersonSingInter
+            secondSingularLabel.text = verbParts.secondPersonSingInter
+            thirdSingularLabel.text = verbParts.thirdPersonSingInter
+            firstPluralLabel.text = verbParts.firstPersonPlInter
+            firstPluralAlternateLabel.text = verbParts.firstPersonPlInterAlt
+            secondPluralLabel.text = verbParts.secondPersonPlInter
+            thirdPluralLabel.text = verbParts.thirdPersonPlInter
+            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlInterAlt
+            
+            
+        default:
+            firstSingularLabel.text = verbParts.firstPersonSingPos
+            secondSingularLabel.text = verbParts.secondPersonSingPos
+            thirdSingularLabel.text = verbParts.thirdPersonSingPos
+            firstPluralLabel.text = verbParts.firstPersonPlPos
+            firstPluralAlternateLabel.text = verbParts.firstPersonPlPosAlt
+            secondPluralLabel.text = verbParts.secondPersonPlPos
+            thirdPluralLabel.text = verbParts.thirdPersonPlPos
+            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlPosAlt
+        }
+
         
-        return cell
     }
-*/
-}
+    */
+    
+    
+   }
