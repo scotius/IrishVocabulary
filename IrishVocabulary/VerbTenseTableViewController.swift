@@ -16,12 +16,22 @@ class VerbTenseTableViewController : UITableViewController {
 
     @IBOutlet weak var segment: UISegmentedControl!
     var sectionsArray = [VerbTenseSection]()
+    var positiveSectionsArray = [VerbTenseSection]()
+    var negativeSectionsArray = [VerbTenseSection]()
+    var interrogativeSectionsArray = [VerbTenseSection]()
+    var impersonalSectionsArray = [VerbTenseSection]()
     var verb = Verb()
     var parts = VerbParts()
     var tense = ""
-    var singularItems = [String]()
-    var pluralItems = [String]()
-    var impersonalItems = [String]()
+    var singularPositiveItems = [String]()
+    var singularNegativeItems = [String]()
+    var singularInterrogativeItems = [String]()
+    var pluralPositiveItems = [String]()
+    var pluralNegativeItems = [String]()
+    var pluralInterrogativeItems = [String]()
+    var impersonalPositiveItems = [String]()
+    var impersonalNegativeItems = [String]()
+    var impersonalInterrogativeItems = [String]()
     
     
     override func viewDidLoad() {
@@ -47,75 +57,68 @@ class VerbTenseTableViewController : UITableViewController {
     
     func createVerbTenseSections() {
         
-        let singularSection = VerbTenseSection()
-        singularSection.heading = "Singular"
-        singularSection.items = singularItems
-        let pluralSection = VerbTenseSection()
-        pluralSection.heading = "Plural"
-        pluralSection.items = pluralItems
-        let impersonalSection = VerbTenseSection()
-        impersonalSection.heading = "Impersonal"
-        impersonalSection.items = impersonalItems
-        sectionsArray.append(singularSection)
-        sectionsArray.append(pluralSection)
-        sectionsArray.append(impersonalSection)
-        
+        let singularPositiveSection = VerbTenseSection()
+        singularPositiveSection.heading = "Singular"
+        singularPositiveSection.items = singularPositiveItems
+        let singularNegativeSection = VerbTenseSection()
+        singularNegativeSection.heading = "Singular"
+        singularNegativeSection.items = singularNegativeItems
+        let singularInterrogativeSection = VerbTenseSection()
+        singularInterrogativeSection.heading = "Singular"
+        singularInterrogativeSection.items = singularInterrogativeItems
+        let pluralPositiveSection = VerbTenseSection()
+        pluralPositiveSection.heading = "Plural"
+        pluralPositiveSection.items = pluralPositiveItems
+        let pluralNegativeSection = VerbTenseSection()
+        pluralNegativeSection.heading = "Plural"
+        pluralNegativeSection.items = pluralNegativeItems
+        let pluralInterrogativeSection = VerbTenseSection()
+        pluralInterrogativeSection.heading = "Plural"
+        pluralInterrogativeSection.items = pluralInterrogativeItems
+        let impersonalPositiveSection = VerbTenseSection()
+        impersonalPositiveSection.heading = "Impersonal"
+        impersonalPositiveSection.items = impersonalPositiveItems
+        let impersonalNegativeSection = VerbTenseSection()
+        impersonalNegativeSection.heading = "Impersonal"
+        impersonalNegativeSection.items = impersonalNegativeItems
+        let impersonalInterrogativeSection = VerbTenseSection()
+        impersonalInterrogativeSection.heading = "Impersonal"
+        impersonalInterrogativeSection.items = impersonalInterrogativeItems
+        positiveSectionsArray.append(singularPositiveSection)
+        positiveSectionsArray.append(pluralPositiveSection)
+        positiveSectionsArray.append(impersonalPositiveSection)
+        negativeSectionsArray.append(singularNegativeSection)
+        negativeSectionsArray.append(pluralNegativeSection)
+        negativeSectionsArray.append(impersonalNegativeSection)
+        impersonalSectionsArray.append(impersonalPositiveSection)
+        impersonalSectionsArray.append(impersonalNegativeSection)
+        impersonalSectionsArray.append(impersonalInterrogativeSection)
+
+
 }
 
   override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return sectionsArray[section].heading
     }
     
-    /*
-    @IBAction func segmentPressed(_ sender: Any) {
-        
+    
+    
+    
+    @IBAction func segmentPressed(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            firstSingularLabel.text = verbParts.firstPersonSingPos
-            secondSingularLabel.text = verbParts.secondPersonSingPos
-            thirdSingularLabel.text = verbParts.thirdPersonSingPos
-            firstPluralLabel.text = verbParts.firstPersonPlPos
-            firstPluralAlternateLabel.text = verbParts.firstPersonPlPosAlt
-            secondPluralLabel.text = verbParts.secondPersonPlPos
-            thirdPluralLabel.text = verbParts.thirdPersonPlPos
-            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlPosAlt
-            
+            sectionsArray = positiveSectionsArray
         case 1:
-            
-            firstSingularLabel.text = verbParts.firstPersonSingNeg
-            secondSingularLabel.text = verbParts.secondPersonSingNeg
-            thirdSingularLabel.text = verbParts.thirdPersonSingNeg
-            firstPluralLabel.text = verbParts.firstPersonPlNeg
-            firstPluralAlternateLabel.text = verbParts.firstPersonPlNegAlt
-            secondPluralLabel.text = verbParts.secondPersonPlNeg
-            thirdPluralLabel.text = verbParts.thirdPersonPlNeg
-            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlNegAlt
-            
+            sectionsArray = negativeSectionsArray
         case 2:
-            firstSingularLabel.text = verbParts.firstPersonSingInter
-            secondSingularLabel.text = verbParts.secondPersonSingInter
-            thirdSingularLabel.text = verbParts.thirdPersonSingInter
-            firstPluralLabel.text = verbParts.firstPersonPlInter
-            firstPluralAlternateLabel.text = verbParts.firstPersonPlInterAlt
-            secondPluralLabel.text = verbParts.secondPersonPlInter
-            thirdPluralLabel.text = verbParts.thirdPersonPlInter
-            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlInterAlt
-            
-            
+            sectionsArray = interrogativeSectionsArray
         default:
-            firstSingularLabel.text = verbParts.firstPersonSingPos
-            secondSingularLabel.text = verbParts.secondPersonSingPos
-            thirdSingularLabel.text = verbParts.thirdPersonSingPos
-            firstPluralLabel.text = verbParts.firstPersonPlPos
-            firstPluralAlternateLabel.text = verbParts.firstPersonPlPosAlt
-            secondPluralLabel.text = verbParts.secondPersonPlPos
-            thirdPluralLabel.text = verbParts.thirdPersonPlPos
-            thirdPluralAlternateLabel.text = verbParts.thirdPersonPlPosAlt
-        }
+            sectionsArray = positiveSectionsArray        }
 
         
     }
-    */
     
+    
+        
     
    }

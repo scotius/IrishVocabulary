@@ -30,9 +30,15 @@ class VerbDetailViewController : UIViewController {
     var verbName = ""
     var verb = Verb()
     var parts = VerbParts()
-    var singularItems = [String]()
-    var pluralItems = [String]()
-    var impersonalItems = [String]()
+    var singularPositiveItems = [String]()
+    var singularNegativeItems = [String]()
+    var singularInterrogativeItems = [String]()
+    var pluralPositiveItems = [String]()
+    var pluralNegativeItems = [String]()
+    var pluralInterrogativeItems = [String]()
+    var impersonalPositiveItems = [String]()
+    var impersonalNegativeItems = [String]()
+    var impersonalInterrogativeItems = [String]()
     
     
     
@@ -458,12 +464,9 @@ class VerbDetailViewController : UIViewController {
         parts.firstPersonPlPos = verb.presentSubjunctive1stPersonPlPos
         parts.firstPersonPlNeg = verb.presentSubjunctive1stPersonPlNeg
         parts.secondPersonPlPos = verb.presentSubjunctive2ndPersonPlPos
-        parts.secondPersonPlInter = verb.presentSubjunctive2ndPersonPlInter
         parts.secondPersonPlNeg = verb.presentSubjunctive2ndPersonPlNeg
         parts.thirdPersonPlPos = verb.presentSubjunctive3rdPersonPlPos
         parts.thirdPersonPlNeg = verb.presentSubjunctive3rdPersonPlNeg
-        parts.thirdPersonPlPosAlt = verb.presentSubjunctive3rdPersonPlPosAlt
-        parts.thirdPersonPlNegAlt  = verb.presentSubjunctive3rdPersonPlNegAlt
         parts.impersonalPos = verb.presentSubjunctiveImpersonalPos
         parts.impersonalNeg = verb.presentSubjunctiveImpersonalNeg
         createTenseSections()
@@ -473,27 +476,26 @@ class VerbDetailViewController : UIViewController {
     
     @IBAction func imperativePressed(_ sender: Any) {
         tense = "imperative"
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        singularItems.append(verb.imperative1stPersonSingPos)
-        singularItems.append(verb.imperative1stPersonSingNeg)
-        singularItems.append(verb.imperative2ndPersonSingPos)
-        singularItems.append(verb.imperative2ndPersonSingNeg)
-        singularItems.append(verb.imperative3rdPersonSingPos)
-        singularItems.append(verb.imperative3rdPersonSingNeg)
-        pluralItems.append(verb.imperative1stPersonPlPosAlt)
-        pluralItems.append(verb.imperative1stPersonPlNegAlt)
-        pluralItems.append(verb.imperative1stPersonPlPos)
-        pluralItems.append(verb.imperative1stPersonPlNeg)
-        pluralItems.append(verb.imperative2ndPersonPlPos)
-        pluralItems.append(verb.imperative2ndPersonPlNeg)
-        pluralItems.append(verb.imperative3rdPersonPlPos)
-        pluralItems.append(verb.imperative3rdPersonPlNeg)
-        pluralItems.append(verb.imperative3rdPersonPlPosAlt)
-        pluralItems.append(verb.imperative3rdPersonPlNegAlt)
-        impersonalItems.append(verb.imperativeImpersonalPos)
-        impersonalItems.append(verb.imperativeImpersonalNeg)
+  
+        parts.firstPersonSingPos = verb.imperative1stPersonSingPos
+        parts.firstPersonSingNeg = verb.imperative1stPersonSingNeg
+        parts.secondPersonSingPos = verb.imperative2ndPersonSingPos
+        parts.secondPersonSingNeg = verb.imperative2ndPersonSingNeg
+        parts.thirdPersonSingPos = verb.imperative3rdPersonSingPos
+        parts.thirdPersonSingNeg = verb.imperative3rdPersonSingNeg
+        parts.firstPersonPlPosAlt = verb.imperative1stPersonPlPosAlt
+        parts.firstPersonPlNegAlt = verb.imperative1stPersonPlNegAlt
+        parts.firstPersonPlPos = verb.imperative1stPersonPlPos
+        parts.firstPersonPlNeg = verb.imperative1stPersonPlNeg
+        parts.secondPersonPlPos = verb.imperative2ndPersonPlPos
+        parts.secondPersonPlNeg = verb.imperative2ndPersonPlNeg
+        parts.thirdPersonPlPos = verb.imperative3rdPersonPlPos
+        parts.thirdPersonPlNeg = verb.imperative3rdPersonPlNeg
+        parts.thirdPersonPlPosAlt = verb.imperative3rdPersonPlPosAlt
+        parts.thirdPersonPlNegAlt = verb.imperative3rdPersonPlNegAlt
+        parts.impersonalPos = verb.imperativeImpersonalPos
+        parts.impersonalNeg = verb.imperativeImpersonalNeg
+        createTenseSections()
         self.performSegue(withIdentifier: "verbDetailToVerbTense", sender: self)
         
     }
@@ -510,6 +512,9 @@ class VerbDetailViewController : UIViewController {
             tenseVC.impersonalItems = self.impersonalItems
             
             
+
+            
+            
         }
         
         
@@ -520,35 +525,7 @@ class VerbDetailViewController : UIViewController {
         pluralItems.removeAll()
         impersonalItems.removeAll()
         
-        singularItems.append(parts.firstPersonSingPos)
-        singularItems.append(parts.firstPersonSingInter)
-        singularItems.append(parts.firstPersonSingNeg)
-        singularItems.append(parts.secondPersonSingPos)
-        singularItems.append(parts.secondPersonSingInter)
-        singularItems.append(parts.secondPersonSingNeg)
-        singularItems.append(parts.thirdPersonSingPos)
-        singularItems.append(parts.thirdPersonSingInter)
-        singularItems.append(parts.thirdPersonSingNeg)
-        pluralItems.append(parts.firstPersonPlPosAlt)
-        pluralItems.append(parts.firstPersonPlInterAlt)
-        pluralItems.append(parts.firstPersonPlNegAlt)
-        pluralItems.append(parts.firstPersonPlPos)
-        pluralItems.append(parts.firstPersonPlInter)
-        pluralItems.append(parts.firstPersonPlNeg)
-        pluralItems.append(parts.secondPersonPlPos)
-        pluralItems.append(parts.secondPersonPlInter)
-        pluralItems.append(parts.secondPersonPlNeg)
-        pluralItems.append(parts.thirdPersonPlPos)
-        pluralItems.append(parts.thirdPersonPlInter)
-        pluralItems.append(parts.thirdPersonPlNeg)
-        pluralItems.append(parts.thirdPersonPlPosAlt)
-        pluralItems.append(parts.thirdPersonPlInterAlt)
-        pluralItems.append(parts.thirdPersonPlNegAlt)
-        impersonalItems.append(parts.impersonalPos)
-        impersonalItems.append(parts.impersonalInter)
-        impersonalItems.append(parts.impersonalNeg)
-        
-        
+                
     }
     
     

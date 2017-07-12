@@ -361,7 +361,7 @@
                                 <segment title="Second"/>
                             </segments>
                             <connections>
-                                <action selector="segmentPressed:" destination="vfr-07-8kA" eventType="valueChanged" id="nWZ-8N-fE9"/>
+                                <action selector="segmentPressed:" destination="vfr-07-8kA" eventType="valueChanged" id="b7N-ph-Mcy"/>
                             </connections>
                         </segmentedControl>
                         <prototypes>
@@ -369,7 +369,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhK-Da-2mT" id="mFg-oJ-jfb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
