@@ -108,10 +108,13 @@ class VerbTenseTableViewController : UITableViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             sectionsArray = positiveSectionsArray
+            tableView.reloadData()
         case 1:
             sectionsArray = negativeSectionsArray
+            tableView.reloadData()
         case 2:
             sectionsArray = interrogativeSectionsArray
+            tableView.reloadData()
         default:
             sectionsArray = positiveSectionsArray        }
 

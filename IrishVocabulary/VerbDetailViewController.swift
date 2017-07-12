@@ -507,9 +507,16 @@ class VerbDetailViewController : UIViewController {
             tenseVC.verb = self.verb
             tenseVC.tense = self.tense
             tenseVC.parts = self.parts
-            tenseVC.singularItems = self.singularItems
-            tenseVC.pluralItems = self.pluralItems
-            tenseVC.impersonalItems = self.impersonalItems
+            tenseVC.singularPositiveItems = self.singularPositiveItems
+            tenseVC.singularNegativeItems = self.singularNegativeItems
+            tenseVC.singularInterrogativeItems = self.singularInterrogativeItems
+            tenseVC.pluralPositiveItems = self.pluralPositiveItems
+            tenseVC.pluralNegativeItems = self.pluralNegativeItems
+            tenseVC.pluralInterrogativeItems = self.pluralNegativeItems
+            tenseVC.impersonalPositiveItems = self.impersonalPositiveItems
+            tenseVC.impersonalNegativeItems = self.impersonalNegativeItems
+            tenseVC.impersonalInterrogativeItems = self.impersonalInterrogativeItems
+
             
             
 
@@ -521,11 +528,15 @@ class VerbDetailViewController : UIViewController {
     }
     
     func createTenseSections() {
-        singularItems.removeAll()
-        pluralItems.removeAll()
-        impersonalItems.removeAll()
-        
-                
+        singularPositiveItems.removeAll()
+        singularNegativeItems.removeAll()
+        singularInterrogativeItems.removeAll()
+        pluralPositiveItems.removeAll()
+        pluralNegativeItems.removeAll()
+        pluralInterrogativeItems.removeAll()
+        impersonalPositiveItems.removeAll()
+        impersonalNegativeItems.removeAll()
+        impersonalInterrogativeItems.removeAll()                 
     }
     
     
