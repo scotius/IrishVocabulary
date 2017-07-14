@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -338,55 +339,100 @@
                         <outlet property="infinitiveLabel" destination="hWA-DD-oM8" id="MhT-R8-RFx"/>
                         <outlet property="verbalAdjectiveLabel" destination="1DF-pE-4aE" id="3Py-re-4JB"/>
                         <outlet property="verbalNounLabel" destination="WVf-f2-Eq3" id="McA-Cl-0o7"/>
-                        <segue destination="vfr-07-8kA" kind="show" identifier="verbDetailToVerbTense" id="Fr9-Tc-JHq"/>
+                        <segue destination="98O-vS-GUi" kind="show" identifier="verbDetailToVerbTense" id="xew-MT-rdW"/>
+                        <segue destination="PoM-zs-T1t" kind="show" identifier="verbDetailToVerbMood" id="6zj-Ge-iH0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAR-bm-8dP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3172" y="1047.5262368815593"/>
         </scene>
-        <!--Verb Tense Table View Controller-->
-        <scene sceneID="Jxz-Xo-Cf9">
+        <!--Verb Tense View Controller-->
+        <scene sceneID="MEs-9r-PlA">
             <objects>
-                <tableViewController id="vfr-07-8kA" customClass="VerbTenseTableViewController" customModule="IrishVocabulary" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xCe-fe-Gok">
+                <viewController id="98O-vS-GUi" customClass="VerbTenseViewController" customModule="IrishVocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6SN-Cf-Fa4"/>
+                        <viewControllerLayoutGuide type="bottom" id="roc-rn-6ic"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pLq-rs-uve">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1K8-6I-tQ1">
+                                <rect key="frame" x="0.0" y="639" width="238" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fjh-yR-LYV">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ijo-eT-euC">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="s61-NP-6fU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2ej-fN-Lxf">
+                                <rect key="frame" x="238" y="639" width="121" height="28"/>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ujy-Su-Yc9">
+                                <rect key="frame" x="0.0" y="639" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Positive"/>
+                                    <segment title="Negative"/>
+                                    <segment title="Interrogative"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentPressed:" destination="98O-vS-GUi" eventType="valueChanged" id="i11-zW-Lym"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6G2-tE-Dxy">
+                                <rect key="frame" x="0.0" y="99" width="375" height="540"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="verbTenseCell" id="fcA-dk-9Er">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fcA-dk-9Er" id="l1E-r9-v77">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <segmentedControl key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="889-Wf-87B">
-                            <rect key="frame" x="0.0" y="72" width="375" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segments>
-                                <segment title="Positive"/>
-                                <segment title="Negative"/>
-                                <segment title="Interrogative"/>
-                            </segments>
-                            <connections>
-                                <action selector="segmentPressed:" destination="vfr-07-8kA" eventType="valueChanged" id="b7N-ph-Mcy"/>
-                            </connections>
-                        </segmentedControl>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="verbTenseCell" id="bhK-Da-2mT">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bhK-Da-2mT" id="mFg-oJ-jfb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vfr-07-8kA" id="6zR-c1-VHA"/>
-                            <outlet property="delegate" destination="vfr-07-8kA" id="wNV-Ly-Tw5"/>
-                        </connections>
-                    </tableView>
+                        <constraints>
+                            <constraint firstItem="6G2-tE-Dxy" firstAttribute="leading" secondItem="1K8-6I-tQ1" secondAttribute="leading" id="2dv-Yc-URU"/>
+                            <constraint firstItem="2ej-fN-Lxf" firstAttribute="top" secondItem="Ujy-Su-Yc9" secondAttribute="top" id="7M0-7P-7rp"/>
+                            <constraint firstItem="6G2-tE-Dxy" firstAttribute="top" secondItem="6SN-Cf-Fa4" secondAttribute="bottom" constant="35" id="JCI-H8-ywp"/>
+                            <constraint firstItem="roc-rn-6ic" firstAttribute="top" secondItem="2ej-fN-Lxf" secondAttribute="bottom" id="JoE-fm-YgA"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1K8-6I-tQ1" secondAttribute="bottom" constant="-22" id="XlG-8y-zOg"/>
+                            <constraint firstItem="2ej-fN-Lxf" firstAttribute="top" secondItem="1K8-6I-tQ1" secondAttribute="top" id="bwh-JL-Cnz"/>
+                            <constraint firstItem="Ujy-Su-Yc9" firstAttribute="leading" secondItem="pLq-rs-uve" secondAttribute="leading" id="eIK-VF-hSp"/>
+                            <constraint firstItem="2ej-fN-Lxf" firstAttribute="leading" secondItem="1K8-6I-tQ1" secondAttribute="trailing" id="gDM-Gj-fdL"/>
+                            <constraint firstItem="2ej-fN-Lxf" firstAttribute="leading" secondItem="pLq-rs-uve" secondAttribute="leading" constant="238" id="h38-rC-Vqx"/>
+                            <constraint firstItem="6G2-tE-Dxy" firstAttribute="leading" secondItem="pLq-rs-uve" secondAttribute="leading" id="hBH-dM-CTM"/>
+                            <constraint firstAttribute="trailing" secondItem="6G2-tE-Dxy" secondAttribute="trailing" id="iMa-MV-MmI"/>
+                            <constraint firstAttribute="trailing" secondItem="Ujy-Su-Yc9" secondAttribute="trailing" id="tbH-64-qkw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2ej-fN-Lxf" secondAttribute="trailing" id="vMP-S8-PTB"/>
+                            <constraint firstItem="roc-rn-6ic" firstAttribute="top" secondItem="Ujy-Su-Yc9" secondAttribute="bottom" id="wMr-e4-EO8"/>
+                            <constraint firstItem="Ujy-Su-Yc9" firstAttribute="top" secondItem="6G2-tE-Dxy" secondAttribute="bottom" id="xsh-GF-dc3"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <outlet property="segment" destination="889-Wf-87B" id="iDi-ST-TYI"/>
+                        <outlet property="segment" destination="Ujy-Su-Yc9" id="lpZ-zB-jFv"/>
+                        <outlet property="tableView" destination="6G2-tE-Dxy" id="PV2-iN-RML"/>
                     </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xmg-ks-xhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GQb-vf-sdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3849" y="1048"/>
+            <point key="canvasLocation" x="4047" y="1682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lsm-R9-AEb">
@@ -405,6 +451,92 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lfu-Qa-dLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="845.60000000000002" y="12.143928035982009"/>
+        </scene>
+        <!--Verb Mood View Controller-->
+        <scene sceneID="N4f-im-PO3">
+            <objects>
+                <viewController id="PoM-zs-T1t" customClass="VerbMoodViewController" customModule="IrishVocabulary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f9W-li-CZw"/>
+                        <viewControllerLayoutGuide type="bottom" id="36v-Ye-ucr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ttl-Ex-yng">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Z2-lZ-aal">
+                                <rect key="frame" x="0.0" y="639" width="238" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NJi-km-ghd">
+                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sLY-uR-mkV">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LTg-TE-i0D">
+                                                        <rect key="frame" x="0.0" y="0.0" width="238" height="50"/>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LTS-ub-Bz9">
+                                <rect key="frame" x="238" y="639" width="121" height="28"/>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hjE-FH-1aN">
+                                <rect key="frame" x="0.0" y="639" width="375" height="29"/>
+                                <segments>
+                                    <segment title="Positive"/>
+                                    <segment title="Negative"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentPressed:" destination="PoM-zs-T1t" eventType="valueChanged" id="yzU-z1-Gph"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eFZ-1b-u3F">
+                                <rect key="frame" x="0.0" y="55" width="375" height="584"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="verbMoodCell" id="deD-L0-Xc7">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="deD-L0-Xc7" id="PyL-79-Yvx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hjE-FH-1aN" firstAttribute="top" secondItem="eFZ-1b-u3F" secondAttribute="bottom" id="0SG-AV-Jvn"/>
+                            <constraint firstItem="LTS-ub-Bz9" firstAttribute="top" secondItem="2Z2-lZ-aal" secondAttribute="top" id="2pJ-aX-uoq"/>
+                            <constraint firstAttribute="trailing" secondItem="hjE-FH-1aN" secondAttribute="trailing" id="8L3-Ij-SmI"/>
+                            <constraint firstItem="eFZ-1b-u3F" firstAttribute="top" secondItem="f9W-li-CZw" secondAttribute="bottom" constant="35" id="Ezh-hS-VL9"/>
+                            <constraint firstAttribute="trailing" secondItem="eFZ-1b-u3F" secondAttribute="trailing" id="IbY-XH-dZZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LTS-ub-Bz9" secondAttribute="trailing" id="Rbc-vy-T6G"/>
+                            <constraint firstItem="eFZ-1b-u3F" firstAttribute="leading" secondItem="ttl-Ex-yng" secondAttribute="leading" id="Sfa-hF-igR"/>
+                            <constraint firstItem="hjE-FH-1aN" firstAttribute="leading" secondItem="ttl-Ex-yng" secondAttribute="leading" id="ZhO-sB-9VY"/>
+                            <constraint firstItem="36v-Ye-ucr" firstAttribute="top" secondItem="LTS-ub-Bz9" secondAttribute="bottom" id="cQb-3m-QUn"/>
+                            <constraint firstItem="36v-Ye-ucr" firstAttribute="top" secondItem="hjE-FH-1aN" secondAttribute="bottom" id="lwH-dv-mKx"/>
+                            <constraint firstItem="LTS-ub-Bz9" firstAttribute="top" secondItem="hjE-FH-1aN" secondAttribute="top" id="o8Q-LY-TpC"/>
+                            <constraint firstItem="LTS-ub-Bz9" firstAttribute="leading" secondItem="2Z2-lZ-aal" secondAttribute="trailing" id="ovP-pp-J7V"/>
+                            <constraint firstItem="LTS-ub-Bz9" firstAttribute="leading" secondItem="ttl-Ex-yng" secondAttribute="leading" constant="238" id="twn-Sg-tiF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2Z2-lZ-aal" secondAttribute="bottom" constant="-22" id="ux1-Nq-iqr"/>
+                            <constraint firstItem="eFZ-1b-u3F" firstAttribute="leading" secondItem="2Z2-lZ-aal" secondAttribute="leading" id="wmQ-gU-bkl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segment" destination="hjE-FH-1aN" id="e9t-f6-4M0"/>
+                        <outlet property="tableView" destination="eFZ-1b-u3F" id="7wa-Hj-aWx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mic-Ok-W67" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4010" y="1036"/>
         </scene>
     </scenes>
 </document>
