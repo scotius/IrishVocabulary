@@ -20,6 +20,7 @@
 		D289CCC61EE11F4900104EF9 /* PrepositionalPronoun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC51EE11F4900104EF9 /* PrepositionalPronoun.swift */; };
 		D289CCC81EE11F5600104EF9 /* SimplePreposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D289CCC71EE11F5600104EF9 /* SimplePreposition.swift */; };
 		D291CEE51EDF0E59004A4FF3 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291CEE41EDF0E59004A4FF3 /* Section.swift */; };
+		D29DC88E1F19911B00BD3688 /* AdjectiveDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DC88D1F19911B00BD3688 /* AdjectiveDetailViewController.swift */; };
 		D29DD0CA1F1939FE007AB007 /* VerbTenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DD0C91F1939FE007AB007 /* VerbTenseViewController.swift */; };
 		D29DD0CC1F193D8D007AB007 /* VerbMoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29DD0CB1F193D8D007AB007 /* VerbMoodViewController.swift */; };
 		D2A88E621EC2009900F83386 /* Noun.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A88E611EC2009900F83386 /* Noun.swift */; };
@@ -51,6 +52,7 @@
 		D289CCC51EE11F4900104EF9 /* PrepositionalPronoun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepositionalPronoun.swift; sourceTree = "<group>"; };
 		D289CCC71EE11F5600104EF9 /* SimplePreposition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplePreposition.swift; sourceTree = "<group>"; };
 		D291CEE41EDF0E59004A4FF3 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		D29DC88D1F19911B00BD3688 /* AdjectiveDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjectiveDetailViewController.swift; sourceTree = "<group>"; };
 		D29DD0C91F1939FE007AB007 /* VerbTenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTenseViewController.swift; sourceTree = "<group>"; };
 		D29DD0CB1F193D8D007AB007 /* VerbMoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbMoodViewController.swift; sourceTree = "<group>"; };
 		D2A88E611EC2009900F83386 /* Noun.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Noun.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				D289CCBE1EE111FF00104EF9 /* Adjective.swift */,
 				D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */,
 				D277F71C1F0C76CB00395301 /* AdjectiveSection.swift */,
+				D29DC88D1F19911B00BD3688 /* AdjectiveDetailViewController.swift */,
 			);
 			name = "Adjective Classes";
 			path = ..;
@@ -335,6 +338,7 @@
 				D2A88E641EC200CC00F83386 /* NounTableViewController.swift in Sources */,
 				D289CCC61EE11F4900104EF9 /* PrepositionalPronoun.swift in Sources */,
 				D277F71D1F0C76CB00395301 /* AdjectiveSection.swift in Sources */,
+				D29DC88E1F19911B00BD3688 /* AdjectiveDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
