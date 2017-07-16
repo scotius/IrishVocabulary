@@ -1,23 +1,23 @@
 //
-//  AdjectiveSections.swift
+//  AdjectiveDetailSection.swift
 //  IrishVocabulary
 //
-//  Created by Scott on 7/4/17.
+//  Created by Scott on 7/16/17.
 //  Copyright © 2017 Scott. All rights reserved.
 //
 
 import Foundation
 
-class AdjectiveSection {
+class AdjectiveDetailSection {
     
     
     
     var heading : String
-    var items : [String]
+    var item : String
     
     init() {
         heading = ""
-        items = []
+        item = ""
     }
     
 }

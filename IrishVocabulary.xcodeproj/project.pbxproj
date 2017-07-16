@@ -30,6 +30,7 @@
 		D2B106AF1EC01C2E006163DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106AD1EC01C2E006163DC /* Main.storyboard */; };
 		D2B106B11EC01C2E006163DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B01EC01C2E006163DC /* Assets.xcassets */; };
 		D2B106B41EC01C2E006163DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2B106B21EC01C2E006163DC /* LaunchScreen.storyboard */; };
+		D2C700601F1C016000EE3717 /* AdjectiveDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C7005F1F1C016000EE3717 /* AdjectiveDetailSection.swift */; };
 		D2DEF10B1F09756400DBEDFF /* VerbTenseSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DEF10A1F09756400DBEDFF /* VerbTenseSection.swift */; };
 		D2F1B9BB1ECD544F0080CC24 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F1B9BA1ECD544F0080CC24 /* Entry.swift */; };
 		D2F42B831EE2723E003C72B8 /* VerbDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */; };
@@ -64,6 +65,7 @@
 		D2B106B01EC01C2E006163DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2B106B31EC01C2E006163DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2B106B51EC01C2E006163DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C7005F1F1C016000EE3717 /* AdjectiveDetailSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdjectiveDetailSection.swift; sourceTree = "<group>"; };
 		D2DEF10A1F09756400DBEDFF /* VerbTenseSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbTenseSection.swift; sourceTree = "<group>"; };
 		D2F1B9BA1ECD544F0080CC24 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		D2F42B821EE2723E003C72B8 /* VerbDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerbDetailViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				D289CCC01EE1129500104EF9 /* AdjectiveTableViewController.swift */,
 				D277F71C1F0C76CB00395301 /* AdjectiveSection.swift */,
 				D29DC88D1F19911B00BD3688 /* AdjectiveDetailViewController.swift */,
+				D2C7005F1F1C016000EE3717 /* AdjectiveDetailSection.swift */,
 			);
 			name = "Adjective Classes";
 			path = ..;
@@ -331,6 +334,7 @@
 				D2B106AA1EC01C2E006163DC /* AppDelegate.swift in Sources */,
 				D29DD0CA1F1939FE007AB007 /* VerbTenseViewController.swift in Sources */,
 				D289CCC11EE1129500104EF9 /* AdjectiveTableViewController.swift in Sources */,
+				D2C700601F1C016000EE3717 /* AdjectiveDetailSection.swift in Sources */,
 				D291CEE51EDF0E59004A4FF3 /* Section.swift in Sources */,
 				D2A88E621EC2009900F83386 /* Noun.swift in Sources */,
 				D289CCC41EE11F3600104EF9 /* CompoundPreposition.swift in Sources */,

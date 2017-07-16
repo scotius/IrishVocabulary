@@ -47,8 +47,7 @@ class VerbTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedVerb =  sectionsArray[indexPath.section].entry[indexPath.row].irish //self.entryArray[(indexPath as NSIndexPath).row].irish  //self.verbs[(indexPath as NSIndexPath).row]
-        
+        self.selectedVerb =  sectionsArray[indexPath.section].entry[indexPath.row].irish
         self.performSegue(withIdentifier: "verbsToDetails", sender: self)
     }
     

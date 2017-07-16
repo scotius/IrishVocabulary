@@ -22,6 +22,15 @@ class AdjectiveTableViewController: UITableViewController {
         createSections()
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedAdjective =  sectionsArray[indexPath.section].entry[indexPath.row].irish
+        print("Selected adjective is \(selectedAdjective)")
+        //self.selectedAdjective =  sectionsArray[indexPath.section].entry[indexPath.row].irish
+        
+        self.performSegue(withIdentifier: "adjectiveToAdjectiveDetail", sender: self)
+    }
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "adjectiveCell", for: indexPath)
         cell.textLabel?.text = sectionsArray[indexPath.section].entry[indexPath.row].irish
@@ -73,7 +82,7 @@ class AdjectiveTableViewController: UITableViewController {
             }
             entryArray.append(entry)
             keysArray.append(entry.key)
-            //removes duplicates values in keysArray
+            //removes duplicate values in keysArray
             keysArray = Array(Set(keysArray))
             //sorts keysArray alphabetically
             keysArray.sort { $0 < $1 }
@@ -81,6 +90,16 @@ class AdjectiveTableViewController: UITableViewController {
         }
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "adjectiveToAdjectiveDetail" {
+            let detailVC = segue.destination as! AdjectiveDetailViewController
+            detailVC.selectedAdjective = self.selectedAdjective
+            
+           //print("detailVC selected adjective is \(detailVC.selectedAdjective)")
+        }
+    }
+    
     
     func createSections() {
         
