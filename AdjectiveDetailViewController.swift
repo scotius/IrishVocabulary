@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class AdjectiveDetailViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+class AdjectiveDetailViewController : UIViewController {
     
     /*
  
@@ -33,11 +33,9 @@ class AdjectiveDetailViewController : UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        print("Selected adjective is \(selectedAdjective)")
+                
         
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+      
         getAdjectiveFromDatabase()
         createDetailSections()
         
@@ -45,27 +43,6 @@ class AdjectiveDetailViewController : UIViewController, UITableViewDelegate, UIT
         
     }
 
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "adjectiveDetailCell", for: indexPath)
-        
-        cell.textLabel?.text = detailSectionsArray[indexPath.section].item
-        return cell
-    }
-    
-
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return detailSectionsArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return detailSectionsArray[section].heading
-    }
     
     func createDetailSections() {
         
