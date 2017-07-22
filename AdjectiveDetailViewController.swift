@@ -12,6 +12,10 @@ import RealmSwift
 
 class AdjectiveDetailViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    /*
+ 
+ */
+    
     @IBOutlet weak var irishLabel: UILabel!
     
     @IBOutlet weak var englishLabel: UILabel!
